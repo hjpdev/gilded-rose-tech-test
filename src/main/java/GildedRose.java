@@ -38,11 +38,10 @@ class GildedRose {
   private void checkSpecial(Item item) {
     if (item.name == "Aged Brie") {
       updateBrie(item);
-    } else if (item.name == "Sulfuras, Hand of Ragnaros") {
-      updateSulfuras(item);
     } else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
       updatePasses(item);
     }
+    item.sellIn -= 1;
   }
 
   private void updateBrie(Item brie) {
@@ -52,11 +51,6 @@ class GildedRose {
       brie.quality += 2;
     }
     qualityLimitsCheck(brie);
-    brie.sellIn -= 1;
-  }
-
-  private void updateSulfuras(Item sulf) {
-
   }
 
   private void updatePasses(Item pass) {
@@ -70,7 +64,6 @@ class GildedRose {
       pass.quality += 1;
     }
     qualityLimitsCheck(pass);
-    pass.sellIn -= 1;
   }
 
   private void qualityLimitsCheck(Item item) {
