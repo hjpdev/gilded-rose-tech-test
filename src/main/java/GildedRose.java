@@ -1,5 +1,7 @@
 package main.java;
 
+import java.util.Arrays;
+
 class GildedRose {
   Item[] items;
 
@@ -9,15 +11,47 @@ class GildedRose {
 
   public void updateQuality() {
     for (int i = 0; i < items.length; i++) {
-      if (checkHasSellIn(items[i])) {
-        items[i].quality -= 1;
+      if (!isSpecial(items[i])) {
+        checkSellIn(items[i]);
       } else {
-        items[i].quality -= 2;
+        checkSpecial(items[i]);
       }
     }
   }
 
-  public boolean checkHasSellIn(Item item) {
-    return item.sellIn > 0;
+  private boolean isSpecial(Item item) {
+    String[] specialNames = { "Aged Brie", "Sulfuras, Hand of Ragnaros", "Backstage passes to a TAFKAL80ETC concert" };
+    boolean contains = Arrays.stream(specialNames).anyMatch(item.name::equals);
+    return contains;
+  }
+
+  private void checkSellIn(Item item) {
+    if (item.sellIn <= 0) {
+      item.quality -= 2;
+    } else {
+      item.quality -= 1;
+    }
+  }
+
+  private void checkSpecial(Item item) {
+    if (item.name == "Aged Brie") {
+      updateBrie(item);
+    } else if (item.name == "Sulfuras, Hand of Ragnaros") {
+      updateSulfuras(item);
+    } else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
+      updatePasses(item);
+    }
+  }
+
+  private void updateBrie(Item brie) {
+
+  }
+
+  private void updateSulfuras(Item sulf) {
+
+  }
+
+  private void updatePasses(Item pass) {
+
   }
 }
