@@ -14,7 +14,7 @@ class GildedRose {
       if (!isSpecial(items[i])) {
         checkSellIn(items[i]);
       } else {
-        checkSpecial(items[i]);
+        updateSpecial(items[i]);
       }
     }
   }
@@ -35,7 +35,7 @@ class GildedRose {
     item.sellIn -= 1;
   }
 
-  private void checkSpecial(Item item) {
+  private void updateSpecial(Item item) {
     if (item.name == "Aged Brie") {
       updateBrie(item);
     } else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
