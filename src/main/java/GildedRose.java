@@ -26,10 +26,10 @@ class GildedRose {
   }
 
   private void checkSellIn(Item item) {
-    if (item.sellIn <= 0) {
-      item.quality -= 2;
-    } else {
+    if (item.sellIn > 0) {
       item.quality -= 1;
+    } else {
+      item.quality -= 2;
     }
   }
 
@@ -44,7 +44,11 @@ class GildedRose {
   }
 
   private void updateBrie(Item brie) {
-
+    if (brie.sellIn > 0) {
+      brie.quality += 1;
+    } else {
+      brie.quality += 2;
+    }
   }
 
   private void updateSulfuras(Item sulf) {
