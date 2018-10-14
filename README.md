@@ -46,7 +46,7 @@ In the command line:
 
 ```
     git clone https://github.com/hjpugh/gilded-rose-tech-test.git
-    cd D:/gilded-rose-tech-test/src/bin
+    cd D:/gilded-rose-tech-test
 ```
 
 To run the tests:
