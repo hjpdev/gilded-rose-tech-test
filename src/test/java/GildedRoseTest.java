@@ -16,7 +16,7 @@ public class GildedRoseTest {
   }
 
   @Test
-  public void notPassedSellIn() {
+  public void notPastSellIn() {
     Item[] items = new Item[] { new Item("foo", 1, 10) };
     GildedRose app = new GildedRose(items);
     app.updateQuality();
@@ -24,7 +24,7 @@ public class GildedRoseTest {
   }
 
   @Test
-  public void passedSellIn() {
+  public void pastSellIn() {
     Item[] items = new Item[] { new Item("foo", 0, 10) };
     GildedRose app = new GildedRose(items);
     app.updateQuality();
