@@ -15,4 +15,19 @@ public class GildedRoseTest {
     assertEquals("foo", app.items[0].name);
   }
 
+  @Test
+  public void notPassedSellIn() {
+    Item[] items = new Item[] { new Item("foo", 1, 10) };
+    GildedRose app = new GildedRose(items);
+    app.updateQuality();
+    assertEquals(9, app.items[0].quality);
+  }
+
+  @Test
+  public void passedSellIn() {
+    Item[] items = new Item[] { new Item("foo", 0, 10) };
+    GildedRose app = new GildedRose(items);
+    app.updateQuality();
+    assertEquals(8, app.items[0].quality);
+  }
 }
