@@ -1,5 +1,6 @@
-
 package main.java;
+
+import main.java.GildedRose;
 
 import static org.junit.Assert.*;
 
