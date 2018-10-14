@@ -1,6 +1,6 @@
 # gilded-rose-tech-test
 
-Makers week 10 mock tech test - Gilded Rose Refactoring Kata
+Makers week 10 mock tech test - Gilded Rose Refactoring Kata. The challenge here was to start with existing code - which while functional was messy & generally poorly written - and to refactor this.
 
 Full instructions for this project can be found [here](https://github.com/emilybache/GildedRose-Refactoring-Kata)
 
@@ -34,7 +34,29 @@ still works correctly. However, do not alter the Item class or Items property as
 goblin in the corner who will insta-rage and one-shot you as he doesn't believe in shared code
 ownership (you can make the UpdateQuality method and Items property static if you like, we'll cover
 for you).
-
-Just for clarification, an item can never have its Quality increase above 50, however "Sulfuras" is a
-legendary item and as such its Quality is 80 and it never alters.
 ```
+
+## How to Use
+
+Make sure you have Java SE downloaded (& Java 9 or above also required), which can be found [here](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+To copy:
+
+In the command line:
+
+```
+  git clone https://github.com/hjpugh/gilded-rose-tech-test.git
+  cd D:/gilded-rose-tech-test/src/bin
+```
+
+To run the tests:
+
+In the command line:
+
+```
+	gradle cleanTest test
+```
+
+## Summary
+
+The commit history should make it fairly clear how I worked through this but to summarise, I started by writing the tests to cover all of the fucntionality mentioned in the original README. After this, I deleted the exiting code and started from scratch, using the testing framework to guide me in implementing the required functionality. There still some room for improvement but the code has been refactored in a way that makes it more readable and clear what is going on.
