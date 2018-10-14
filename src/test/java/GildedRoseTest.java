@@ -38,4 +38,20 @@ public class GildedRoseTest {
     app.updateQuality();
     assertFalse(app.items[0].quality < 0);
   }
+
+  @Test
+  public void agedBrieQualityWithoutSellIn() {
+    Item[] items = new Item[] { new Item("Aged Brie", 0, 10) };
+    GildedRose app = new GildedRose(items);
+    app.updateQuality();
+    assertEquals(12, app.items[0].quality);
+  }
+
+  @Test
+  public void agedBrieQualityWithSellIn() {
+    Item[] items = new Item[] { new Item("Aged Brie", 10, 10) };
+    GildedRose app = new GildedRose(items);
+    app.updateQuality();
+    assertEquals(11, app.items[0].quality);
+  }
 }
