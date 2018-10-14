@@ -38,7 +38,7 @@ for you).
 
 ## How to Use
 
-Make sure you have Java SE downloaded (& Java 9 or above also required), which can be found [here](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+Make sure you have Java SE downloaded, which can be found [here](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 To copy:
 
@@ -59,4 +59,4 @@ In the command line:
 
 ## Summary
 
-The commit history should make it fairly clear how I worked through this but to summarise, I started by writing the tests to cover all of the fucntionality mentioned in the original README. After this, I deleted the exiting code and started from scratch, using the testing framework to guide me in implementing the required functionality. There still some room for improvement but the code has been refactored in a way that makes it more readable and clear what is going on.
+The commit history should make it fairly clear how I worked through this but to summarise, I started by writing the tests to cover all of the fucntionality mentioned in the original README. After this, I deleted the exiting code and started from scratch, using the testing framework to guide me in implementing the required functionality. There still some room for improvement but the code has been refactored in a way that makes it more readable and clear what is going on. Still to implement the functionality for 'conjured' items.
