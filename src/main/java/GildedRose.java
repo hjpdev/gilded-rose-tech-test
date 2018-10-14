@@ -31,6 +31,8 @@ class GildedRose {
     } else {
       item.quality -= 2;
     }
+    qualityLimitsCheck(item);
+    item.sellIn -= 1;
   }
 
   private void checkSpecial(Item item) {
@@ -49,6 +51,8 @@ class GildedRose {
     } else {
       brie.quality += 2;
     }
+    qualityLimitsCheck(brie);
+    brie.sellIn -= 1;
   }
 
   private void updateSulfuras(Item sulf) {
@@ -56,6 +60,24 @@ class GildedRose {
   }
 
   private void updatePasses(Item pass) {
+    if (pass.sellIn < 1) {
+      pass.quality = 0;
+    } else if (pass.sellIn < 6) {
+      pass.quality += 3;
+    } else if (pass.sellIn < 11) {
+      pass.quality += 2;
+    } else {
+      pass.quality += 1;
+    }
+    qualityLimitsCheck(pass);
+    pass.sellIn -= 1;
+  }
 
+  private void qualityLimitsCheck(Item item) {
+    if (item.quality > 50) {
+      item.quality = 50;
+    } else if (item.quality < 0) {
+      item.quality = 0;
+    }
   }
 }

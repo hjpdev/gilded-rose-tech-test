@@ -38,7 +38,7 @@ public class GildedRoseTest {
 
     app.updateQuality();
 
-    assertFalse(app.items[0].quality < 0);
+    assertEquals(0, app.items[0].quality);
   }
 
   @Test
