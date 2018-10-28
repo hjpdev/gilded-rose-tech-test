@@ -114,6 +114,13 @@ public class GildedRoseTest {
   }
 
   @Test
+  public void isConjuredMethod() {
+    GildedRose app = generateApp("Conjured Mana Cake", 3, 6);
+
+    assertEquals(true, app.isConjured(app.items[0]));
+  }
+
+  @Test
   public void isConjuredI() {
     GildedRose app = generateApp("Conjured Mana Caka", 3, 6);
 

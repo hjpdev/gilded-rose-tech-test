@@ -11,8 +11,10 @@ class GildedRose {
 
   public void updateQuality() {
     for (int i = 0; i < items.length; i++) {
-      if (!isSpecial(items[i])) {
+      if (!isSpecial(items[i]) && !isConjured(items[i])) {
         checkSellIn(items[i]);
+      } else if (isConjured(items[i])) {
+        updateConjured(items[i]);
       } else {
         updateSpecial(items[i]);
       }
@@ -25,11 +27,25 @@ class GildedRose {
     return contains;
   }
 
+  boolean isConjured(Item item) {
+    return item.name.contains("Conjured");
+  }
+
   private void checkSellIn(Item item) {
     if (item.sellIn > 0) {
       item.quality -= 1;
     } else {
       item.quality -= 2;
+    }
+    qualityLimitsCheck(item);
+    item.sellIn -= 1;
+  }
+
+  private void updateConjured(Item item) {
+    if (item.sellIn > 0) {
+      item.quality -= 2;
+    } else {
+      item.quality -= 4;
     }
     qualityLimitsCheck(item);
     item.sellIn -= 1;
