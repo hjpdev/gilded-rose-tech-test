@@ -42,8 +42,6 @@ Make sure you have Java SE downloaded, which can be found [here](https://www.ora
 
 To copy:
 
-In the command line:
-
 ```
     git clone https://github.com/hjpugh/gilded-rose-tech-test.git
     cd D:/gilded-rose-tech-test
@@ -51,12 +49,10 @@ In the command line:
 
 To run the tests:
 
-In the command line:
-
 ```
     gradle cleanTest test
 ```
 
 ## Summary
 
-The commit history should make it fairly clear how I worked through this but to summarise, I started by writing the tests to cover all of the fucntionality mentioned in the original README. After this, I deleted the exiting code and started from scratch, using the testing framework to guide me in implementing the required functionality. There still some room for improvement but the code has been refactored in a way that makes it more readable and clear what is going on. Still to implement the functionality for 'conjured' items.
+The commit history should make it fairly clear how I worked through this but to summarise, I started by writing the tests to cover all of the fucntionality mentioned in the original README. After this, I deleted the existing code and started from scratch, using the testing framework to guide me in implementing the required functionality. There still some room for improvement but the code has been refactored in a way that makes it more readable and clear what is going on. Still to implement the functionality for 'conjured' items.
