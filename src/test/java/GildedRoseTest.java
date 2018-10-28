@@ -112,4 +112,22 @@ public class GildedRoseTest {
 
     assertEquals(0, app.items[0].quality);
   }
+
+  @Test
+  public void isConjuredI() {
+    GildedRose app = generateApp("Conjured Mana Caka", 3, 6);
+
+    app.updateQuality();
+
+    assertEquals(4, app.items[0].quality);
+  }
+
+  @Test
+  public void isConjuredII() {
+    GildedRose app = generateApp("Conjured Mana Caka", 0, 10);
+
+    app.updateQuality();
+
+    assertEquals(6, app.items[0].quality);
+  }
 }
